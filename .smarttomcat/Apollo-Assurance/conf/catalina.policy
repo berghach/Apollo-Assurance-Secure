@@ -85,14 +85,14 @@ grant codeBase "file:${catalina.home}/bin/tomcat-juli.jar" {
 
         permission java.lang.management.ManagementPermission "monitor";
 
-        permission java.util.logging.LoggingPermission "control";
+        permission java.utils.logging.LoggingPermission "control";
 
-        permission java.util.PropertyPermission "java.util.logging.config.class", "read";
-        permission java.util.PropertyPermission "java.util.logging.config.file", "read";
-        permission java.util.PropertyPermission "org.apache.juli.AsyncMaxRecordCount", "read";
-        permission java.util.PropertyPermission "org.apache.juli.AsyncOverflowDropType", "read";
-        permission java.util.PropertyPermission "org.apache.juli.ClassLoaderLogManager.debug", "read";
-        permission java.util.PropertyPermission "catalina.base", "read";
+        permission java.utils.PropertyPermission "java.utils.logging.config.class", "read";
+        permission java.utils.PropertyPermission "java.utils.logging.config.file", "read";
+        permission java.utils.PropertyPermission "org.apache.juli.AsyncMaxRecordCount", "read";
+        permission java.utils.PropertyPermission "org.apache.juli.AsyncOverflowDropType", "read";
+        permission java.utils.PropertyPermission "org.apache.juli.ClassLoaderLogManager.debug", "read";
+        permission java.utils.PropertyPermission "catalina.base", "read";
 
         // Note: To enable per context logging configuration, permit read access to
         // the appropriate file. Be sure that the logging configuration is
@@ -133,39 +133,39 @@ grant codeBase "file:${catalina.home}/lib/-" {
 grant {
     // Required for JNDI lookup of named JDBC DataSource's and
     // javamail named MimePart DataSource used to send mail
-    permission java.util.PropertyPermission "java.home", "read";
-    permission java.util.PropertyPermission "java.naming.*", "read";
-    permission java.util.PropertyPermission "javax.sql.*", "read";
+    permission java.utils.PropertyPermission "java.home", "read";
+    permission java.utils.PropertyPermission "java.naming.*", "read";
+    permission java.utils.PropertyPermission "javax.sql.*", "read";
 
     // OS Specific properties to allow read access
-    permission java.util.PropertyPermission "os.name", "read";
-    permission java.util.PropertyPermission "os.version", "read";
-    permission java.util.PropertyPermission "os.arch", "read";
-    permission java.util.PropertyPermission "file.separator", "read";
-    permission java.util.PropertyPermission "path.separator", "read";
-    permission java.util.PropertyPermission "line.separator", "read";
+    permission java.utils.PropertyPermission "os.name", "read";
+    permission java.utils.PropertyPermission "os.version", "read";
+    permission java.utils.PropertyPermission "os.arch", "read";
+    permission java.utils.PropertyPermission "file.separator", "read";
+    permission java.utils.PropertyPermission "path.separator", "read";
+    permission java.utils.PropertyPermission "line.separator", "read";
 
     // JVM properties to allow read access
-    permission java.util.PropertyPermission "java.version", "read";
-    permission java.util.PropertyPermission "java.vendor", "read";
-    permission java.util.PropertyPermission "java.vendor.url", "read";
-    permission java.util.PropertyPermission "java.class.version", "read";
-    permission java.util.PropertyPermission "java.specification.version", "read";
-    permission java.util.PropertyPermission "java.specification.vendor", "read";
-    permission java.util.PropertyPermission "java.specification.name", "read";
+    permission java.utils.PropertyPermission "java.version", "read";
+    permission java.utils.PropertyPermission "java.vendor", "read";
+    permission java.utils.PropertyPermission "java.vendor.url", "read";
+    permission java.utils.PropertyPermission "java.class.version", "read";
+    permission java.utils.PropertyPermission "java.specification.version", "read";
+    permission java.utils.PropertyPermission "java.specification.vendor", "read";
+    permission java.utils.PropertyPermission "java.specification.name", "read";
 
-    permission java.util.PropertyPermission "java.vm.specification.version", "read";
-    permission java.util.PropertyPermission "java.vm.specification.vendor", "read";
-    permission java.util.PropertyPermission "java.vm.specification.name", "read";
-    permission java.util.PropertyPermission "java.vm.version", "read";
-    permission java.util.PropertyPermission "java.vm.vendor", "read";
-    permission java.util.PropertyPermission "java.vm.name", "read";
+    permission java.utils.PropertyPermission "java.vm.specification.version", "read";
+    permission java.utils.PropertyPermission "java.vm.specification.vendor", "read";
+    permission java.utils.PropertyPermission "java.vm.specification.name", "read";
+    permission java.utils.PropertyPermission "java.vm.version", "read";
+    permission java.utils.PropertyPermission "java.vm.vendor", "read";
+    permission java.utils.PropertyPermission "java.vm.name", "read";
 
     // Required for OpenJMX
     permission java.lang.RuntimePermission "getAttribute";
 
     // Allow read of JAXP compliant XML parser debug
-    permission java.util.PropertyPermission "jaxp.debug", "read";
+    permission java.utils.PropertyPermission "jaxp.debug", "read";
 
     // All JSPs need to be able to read this package
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.tomcat";
@@ -193,16 +193,16 @@ grant codeBase "file:${catalina.base}/webapps/manager/-" {
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina";
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.ha.session";
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager";
-    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager.util";
-    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.util";
+    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager.utils";
+    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.utils";
     permission org.apache.catalina.security.DeployXmlPermission "manager";
 };
 grant codeBase "file:${catalina.home}/webapps/manager/-" {
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina";
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.ha.session";
     permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager";
-    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager.util";
-    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.util";
+    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.manager.utils";
+    permission java.lang.RuntimePermission "accessClassInPackage.org.apache.catalina.utils";
     permission org.apache.catalina.security.DeployXmlPermission "manager";
 };
 

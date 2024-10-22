@@ -7,6 +7,15 @@
     <persistence-unit name="apolloAssurance" transaction-type="RESOURCE_LOCAL">
 
         <!-- Specifying classes -->
+        <class>enums.Insurance</class>
+
+        <class>entities.Client</class>
+        <class>entities.Contract</class>
+        <class>entities.AutoContract</class>
+        <class>entities.HabitationContract</class>
+        <class>entities.HealthContract</class>
+        <class>entities.Zone</class>
+        <class>entities.Document</class>
 
         <properties>
             <property name="javax.persistence.provider" value="org.hibernate.jpa.HibernatePersistenceProvider" />
@@ -17,6 +26,7 @@
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
+
             <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
 
             <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
