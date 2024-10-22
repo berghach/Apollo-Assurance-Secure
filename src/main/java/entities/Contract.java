@@ -49,6 +49,8 @@ public class Contract {
         this.amount = amount;
     }
 
+    abstract public Insurance getContractType();
+
     public UUID getId() {
         return id;
     }

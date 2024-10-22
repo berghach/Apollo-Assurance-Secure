@@ -31,6 +31,11 @@ public class HealthContract extends Contract{
     }
 
     @Override
+    public Insurance getContractType() {
+        return Insurance.HEALTH;
+    }
+
+    @Override
     public UUID getId() {
         return super.getId();
     }

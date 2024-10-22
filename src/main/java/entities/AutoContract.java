@@ -39,6 +39,11 @@ public class AutoContract extends Contract{
     }
 
     @Override
+    public Insurance getContractType(){
+        return Insurance.AUTO;
+    }
+
+    @Override
     public UUID getId() {
         return super.getId();
     }

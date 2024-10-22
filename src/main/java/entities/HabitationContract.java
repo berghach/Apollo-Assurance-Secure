@@ -43,6 +43,11 @@ public class HabitationContract extends Contract{
     }
 
     @Override
+    public Insurance getContractType(){
+        return Insurance.HABITATION;
+    }
+
+    @Override
     public UUID getId() {
         return super.getId();
     }
