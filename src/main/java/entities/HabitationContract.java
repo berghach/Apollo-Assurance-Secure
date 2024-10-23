@@ -42,7 +42,6 @@ public class HabitationContract extends Contract{
         this.securitySystem = securitySystem;
     }
 
-    @Override
     public Insurance getContractType(){
         return Insurance.HABITATION;
     }

@@ -38,7 +38,6 @@ public class AutoContract extends Contract{
         this.damageHistory = damageHistory;
     }
 
-    @Override
     public Insurance getContractType(){
         return Insurance.AUTO;
     }

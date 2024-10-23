@@ -7,6 +7,7 @@ class InsuranceTest {
 
     @Test
     public void toStringTest(){
+        System.out.println(Insurance.HABITATION);
         assertEquals("automobile", Insurance.AUTO.toString());
     }
   
