@@ -30,7 +30,6 @@ public class HealthContract extends Contract{
         this.premium = premium;
     }
 
-    @Override
     public Insurance getContractType() {
         return Insurance.HEALTH;
     }
