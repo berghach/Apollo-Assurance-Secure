@@ -23,11 +23,9 @@ public class ZoneService {
         this.clientMapper = clientMapper;
     }
 
-    @Transactional
     public List<ZoneDTO> findAll(){
         return clientMapper.toDTOList(clientRepository.findAll());
     }
-    @Transactional
     public Optional<ZoneDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<Zone> clientOptional = clientRepository.findById(uuid);
 

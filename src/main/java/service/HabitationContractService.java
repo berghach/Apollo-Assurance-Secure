@@ -23,11 +23,9 @@ public class HabitationContractService {
         this.habitationContractMapper = habitationContractMapper;
     }
 
-    @Transactional
     public List<HabitationContractDTO> findAll(){
         return habitationContractMapper.toDTOList(habitationContractRepository.findAll());
     }
-    @Transactional
     public Optional<HabitationContractDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<HabitationContract> habitationContractOptional = habitationContractRepository.findById(uuid);
 

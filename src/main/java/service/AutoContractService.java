@@ -23,11 +23,9 @@ public class AutoContractService {
         this.autoContractMapper = autoContractMapper;
     }
 
-    @Transactional
     public List<AutoContractDTO> findAll(){
         return autoContractMapper.toDTOList(autoContractRepository.findAll());
     }
-    @Transactional
     public Optional<AutoContractDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<AutoContract> autoContractOptional = autoContractRepository.findById(uuid);
 

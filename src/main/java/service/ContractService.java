@@ -24,11 +24,9 @@ public class ContractService {
         this.contractMapper = contractMapper;
     }
 
-    @Transactional
     public List<ContractDTO> findAll(){
         return contractMapper.toDTOList(contractRepository.findAll());
     }
-    @Transactional
     public Optional<ContractDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<Contract> contractOptional = contractRepository.findById(uuid);
 

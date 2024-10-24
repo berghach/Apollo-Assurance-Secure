@@ -23,11 +23,9 @@ public class DocumentService {
         this.documentMapper = documentMapper;
     }
 
-    @Transactional
     public List<DocumentDTO> findAll(){
         return documentMapper.toDTOList(documentRepository.findAll());
     }
-    @Transactional
     public Optional<DocumentDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<Document> documentOptional = documentRepository.findById(uuid);
 

@@ -25,11 +25,9 @@ public class ClientService {
         this.clientMapper = clientMapper;
     }
 
-    @Transactional
     public List<ClientDTO> findAll(){
         return clientMapper.toDTOList(clientRepository.findAll());
     }
-    @Transactional
     public Optional<ClientDTO> findById(UUID uuid) throws IllegalArgumentException {
         Optional<Client> clientOptional = clientRepository.findById(uuid);
 
