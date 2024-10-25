@@ -12,8 +12,8 @@ public class HabitationContractDTO extends ContractDTO{
     private String address;
     private String securitySystem;
 
-    public HabitationContractDTO(UUID id, boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, BigDecimal propertyValue, String type, ZoneDTO zone, String address, String securitySystem) {
-        super(id, accepted, amount, submittedOn, expiredOn, client);
+    public HabitationContractDTO(boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, BigDecimal propertyValue, String type, ZoneDTO zone, String address, String securitySystem) {
+        super(accepted, amount, submittedOn, expiredOn, client);
         this.propertyValue = propertyValue;
         this.type = type;
         this.zone = zone;

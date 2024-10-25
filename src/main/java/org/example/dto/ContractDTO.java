@@ -15,8 +15,7 @@ public class ContractDTO {
     private ClientDTO client;
     private List<DocumentDTO> documents;
 
-    public ContractDTO(UUID id, boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client) {
-        this.id = id;
+    public ContractDTO(boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client) {
         this.accepted = accepted;
         this.amount = amount;
         this.submittedOn = submittedOn;

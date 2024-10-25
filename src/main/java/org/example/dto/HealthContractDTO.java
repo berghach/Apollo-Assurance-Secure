@@ -10,8 +10,8 @@ public class HealthContractDTO extends ContractDTO{
     private String chronicIllness;
     private boolean premium;
 
-    public HealthContractDTO(UUID id, boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, int insuredAge, String chronicIllness, boolean premium) {
-        super(id, accepted, amount, submittedOn, expiredOn, client);
+    public HealthContractDTO(boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, int insuredAge, String chronicIllness, boolean premium) {
+        super(accepted, amount, submittedOn, expiredOn, client);
         this.insuredAge = insuredAge;
         this.chronicIllness = chronicIllness;
         this.premium = premium;

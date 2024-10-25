@@ -62,4 +62,21 @@ public class HealthContractService {
 
         return !healthContractRepository.existsById(uuid);
     }
+    public double calculateEstimate(HealthContractDTO healthContractDTO) {
+        double base = 500.0;
+        double contractAmount = base;
+        if (healthContractDTO.getInsuredAge() > 60){
+            contractAmount += (base * 0.2);
+        }
+        if (healthContractDTO.getChronicIllness() != null){
+            // the insure does have a chronic illness
+            contractAmount += (base * 0.3);
+        }
+        if(healthContractDTO.isPremium()){
+            contractAmount += (base * 0.05);
+        }else {
+            contractAmount -= (base * 0.1);
+        }
+        return contractAmount;
+    }
 }

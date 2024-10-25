@@ -8,7 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.example.repository.HabitationContractRepository;
 
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -61,5 +63,26 @@ public class HabitationContractService {
         habitationContractRepository.delete(existingHabitationContract);
 
         return !habitationContractRepository.existsById(uuid);
+    }
+    public double calculateEstimate(HabitationContractDTO habitationContractDTO){
+        double base = 500.0;
+        double contractAmount = base;
+        if (Objects.equals(habitationContractDTO.getType(), "house")){
+            contractAmount += (base * 0.02);
+        }
+        if (habitationContractDTO.getZone().isDangerous()){
+            contractAmount += (base * 0.05);
+        }
+        if (habitationContractDTO.getPropertyValue().compareTo(new BigDecimal(200000)) > 0){
+            contractAmount += (base * 0.1);
+        }
+        if (habitationContractDTO.getSecuritySystem() == null){
+            // the client habitation does not have Security System
+            contractAmount += (base * 0.15);
+        }else {
+            // the client habitation does have Security System
+            contractAmount -= (base * 0.15);
+        }
+        return contractAmount;
     }
 }
