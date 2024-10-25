@@ -7,15 +7,15 @@
     <persistence-unit name="apolloAssurance" transaction-type="RESOURCE_LOCAL">
 
         <!-- Specifying classes -->
-        <class>org.example.enums.Insurance</class>
+        <class>enums.Insurance</class>
 
-        <class>org.example.entities.Client</class>
-        <class>org.example.entities.Contract</class>
-        <class>org.example.entities.AutoContract</class>
-        <class>org.example.entities.HabitationContract</class>
-        <class>org.example.entities.HealthContract</class>
-        <class>org.example.entities.Zone</class>
-        <class>org.example.entities.Document</class>
+        <class>entities.Client</class>
+        <class>entities.Contract</class>
+        <class>entities.AutoContract</class>
+        <class>entities.HabitationContract</class>
+        <class>entities.HealthContract</class>
+        <class>entities.Zone</class>
+        <class>entities.Document</class>
 
         <properties>
             <property name="javax.persistence.provider" value="org.hibernate.jpa.HibernatePersistenceProvider" />
