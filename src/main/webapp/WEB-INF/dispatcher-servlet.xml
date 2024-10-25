@@ -16,12 +16,11 @@
            http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- Activation des annotations Spring -->
-    <context:component-scan base-package="org.example"/>
+    <context:component-scan base-package="org.example.assuranceapp"/>
 
     <!-- Activation des fonctionnalités Spring MVC -->
     <mvc:annotation-driven/>
-    <mvc:resources mapping="/resources/**" location="/resources/" />
-
+    <mvc:resources mapping="/assets/**" location="/assets/" />
 
     <!-- Configuration du résolveur de vues -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -31,7 +30,7 @@
 
     <!-- Configuration de l'EntityManagerFactory pour JPA -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="persistenceUnitName" value="apolloAssurance"/>
+        <property name="persistenceUnitName" value="default"/>
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
         </property>
