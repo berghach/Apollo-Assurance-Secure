@@ -62,4 +62,23 @@ public class AutoContractService {
 
         return !autoContractRepository.existsById(uuid);
     }
+    public double calculateEstimate(AutoContractDTO autoContractDTO){
+        double base = 500.0;
+        double contractAmount = base;
+        if(autoContractDTO.getDriverAge() < 25){
+            contractAmount += (base * 0.1);
+        }
+        if (autoContractDTO.isLuxurious()){
+            contractAmount += (base * 0.15);
+        }
+        if (autoContractDTO.isProfessional()){
+            contractAmount += (base * 0.1);
+        }
+        if (autoContractDTO.isDamaged()){
+            contractAmount += (base * 0.1);
+        }else {
+            contractAmount -= (base * 0.2);
+        }
+        return contractAmount;
+    }
 }

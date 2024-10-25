@@ -12,8 +12,8 @@ public class AutoContractDTO extends ContractDTO{
     private boolean damaged;
     private String damageHistory;
 
-    public AutoContractDTO(UUID id, boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, int driverAge, boolean luxurious, boolean professional, boolean damaged, String damageHistory) {
-        super(id, accepted, amount, submittedOn, expiredOn, client);
+    public AutoContractDTO(boolean accepted, BigDecimal amount, LocalDate submittedOn, LocalDate expiredOn, ClientDTO client, int driverAge, boolean luxurious, boolean professional, boolean damaged, String damageHistory) {
+        super(accepted, amount, submittedOn, expiredOn, client);
         this.driverAge = driverAge;
         this.luxurious = luxurious;
         this.professional = professional;
