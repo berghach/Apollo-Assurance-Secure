@@ -12,7 +12,7 @@ public class HomepageController {
     @GetMapping
     public ModelAndView homepage(){
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("index");
+        mav.setViewName("views.index");
         return mav;
     }
 }
