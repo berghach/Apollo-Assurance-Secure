@@ -1,5 +1,6 @@
 package enums;
 
+import org.example.ApolloAssurance.enums.Insurance;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
